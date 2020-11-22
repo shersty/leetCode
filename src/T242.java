@@ -38,10 +38,37 @@ public class T242 {
             return true;
         }
 
+        /**
+         * 使用哈希映射
+         * @param s
+         * @param t
+         * @return
+         */
+        public static boolean isAnagram2(String s, String t) {
+
+            if (s.length() != t.length())
+                return false;
+
+            char[] chars = new char[26];
+
+            for (int i = 0; i < s.length(); i++) {
+                chars[s.charAt(i) - 'a'] ++;
+                chars[t.charAt(i) - 'a'] --;
+            }
+
+            for (char c: chars) {
+                if (c != 0) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
         public static void main(String[] args) {
             String s = "anagram";
-            String t = "";
-            System.out.println(isAnagram(s, t));        }
+            String t = "aaangrm";
+            System.out.println(isAnagram2(s, t));        }
     }
 
 
