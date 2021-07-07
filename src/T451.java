@@ -74,7 +74,7 @@ public class T451 {
 
             for (Map.Entry<String, Integer> entry:list
                  ) {
-                sb.append(String.valueOf(entry.getKey()).repeat(Math.max(0, entry.getValue())));
+//                sb.append(String.valueOf(entry.getKey()).repeat(Math.max(0, entry.getValue())));
             }
 
             return sb.toString();
