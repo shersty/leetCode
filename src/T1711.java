@@ -1,6 +1,4 @@
 import org.junit.Test;
-import org.omg.PortableInterceptor.INACTIVE;
-
 import java.util.HashMap;
 import java.util.Map;
 
