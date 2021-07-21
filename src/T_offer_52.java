@@ -2,9 +2,11 @@ public class T_offer_52 {
     public class Solution {
         public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
             ListNode a = headA, b = headB;
+            //当没有交点时，a和b最后都为 null
+            //因为 a 和 b 都走了 lengthA +  lengthB 步，都到了结尾～
             while (a != b) {
-                a = a == null? headA: a.next;
-                b = b == null? headB: b.next;
+                a = a == null? headB: a.next;
+                b = b == null? headA: b.next;
             }
             return a;
         }
