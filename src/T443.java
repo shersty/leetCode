@@ -2,7 +2,7 @@ import org.junit.Test;
 
 public class T443 {
 
-    class Solution {
+    static class Solution {
         public static int compress(char[] cs) {
             int n = cs.length;
             int i = 0, j = 0;
